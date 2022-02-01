@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kX42OnmXGrOb0pEUZ+dB5IA4mn/T9cSd4jCyiXmilO4krAGfM0cBCSgSK9trhqJTo/LOuyuprUUR9vVdxcvLJA==",
+  "dgSpecHash": "ZWAXM471DzgS5gfalxJi24/XVCjjfmnUXdn/HexK40ugRFJl5ZDktmVur2UZwZKHjwzDIl/HuAjcOIodA6EVhA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marlon.braga\\source\\repos\\IateClubManager\\Domain.Financas\\Domain.Financas.csproj",
+  "projectFilePath": "C:\\Projetos\\InfNet\\IateClubeRepoMarlon\\IateClubManager\\Domain.Financas\\Domain.Financas.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
