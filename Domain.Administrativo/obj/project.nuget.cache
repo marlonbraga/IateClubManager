@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j7O059mrjkea14Ci8dRMLv2Y+n4RH/syy7Y6vtfHkXmDp7Kx5Efr2ZGs1WeZOPemwIoWEH/4YOuxXpA9KoViWg==",
+  "dgSpecHash": "jKAkLEcqZyfGsu3phIR1G2Xzm7ixdn/PBIyJSli6cRVJJOq9KrN/ulc5WMic3Nj9ifFRhA6L1TVtAIcoQuuKbg==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\InfNet\\IateClubeRepoMarlon\\IateClubManager\\Domain.Administrativo\\Domain.Administrativo.csproj",
+  "projectFilePath": "C:\\codigo\\IateClubManager\\Domain.Administrativo\\Domain.Administrativo.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

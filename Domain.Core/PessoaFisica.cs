@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace Domain.Core
 {
-    public class PessoaFisica : Usuario
+    public abstract class PessoaFisica
     {
         public String CPF { get; set; }
         public String RG { get; set; }
+        public String Nome { get; set; }
+        public String Telefone { get; set; }
+        public String Endereço { get; set; }
     }
 }

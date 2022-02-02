@@ -1,25 +1,38 @@
-﻿using System;
+﻿using Domain.Core;
+using Domain.Core.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace Domain.Administrativo
 {
-    public class CobrancaFinanceira
+    public class CobrancaFinanceira : ICobrancaFinanceira
     {
         public decimal ValorMensalidade { get; set; }
         public DateTime DataVencimento { get; set; }
         public bool Pago { get; set; }
 
+		public CobrancaFinanceira()
+		{
+                
+		}
 
-        public bool ValidaPendenciaFinanceira(List<CobrancaFinanceira> listaCobrancaFinanceira)
-        {
-            foreach (var lista in listaCobrancaFinanceira)
+		public CobrancaFinanceira(decimal valorMensalidade, DateTime dataVencimento, bool pago)
+		{
+			ValorMensalidade = valorMensalidade;
+			DataVencimento = dataVencimento;
+			Pago = pago;
+		}
+
+		public bool ValidaPendenciaFinanceira(ITitulo Titulo)
+		{
+            foreach (var lista in Titulo.CobrancasFinanceiras)
             {
                 if (lista.Pago == false && lista.DataVencimento <= DateTime.Now.AddMonths(-3))
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
-    }
+	}
 }

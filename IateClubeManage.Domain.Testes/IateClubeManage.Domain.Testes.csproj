@@ -13,4 +13,14 @@
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.Administrativo\Domain.Administrativo.csproj" />
+    <ProjectReference Include="..\Domain.Nautico\Domain.Nautico.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="1 - Aplicação\" />
+    <Folder Include="3 - Infraestrutura\" />
+  </ItemGroup>
+
 </Project>

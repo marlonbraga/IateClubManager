@@ -1,4 +1,5 @@
 ﻿using Domain.Core;
+using Domain.Nautico.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Nautico
 {
-    public class Passageiro : PessoaFisica
+    public class Passageiro : PessoaFisica, IPassageiro
     {
 
     }

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Nautico
+namespace Domain.Core
 {
     public class HabilitacaoNautica
     {
-        public Responsavel Responsavel { get; set; }//ou socio
+        public String NumeroHabilitacao { get; set; }
+        public String CategoriaHabilitacao { get; set; }
     }
 }

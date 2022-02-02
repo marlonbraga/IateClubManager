@@ -1,29 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Domain.Administrativo
+namespace Domain.Core.Interfaces
 {
-    public class Embarcacao : Base
-    {
+	public interface IEmbarcacao
+	{
         public string Nome { get; set; }
         public string RegistroMarinha { get; set; }
         public string TamanhoEmbarcacao { get; set; }
         public EMotor TipoMotor { get; set; }
         public ECombustivel TipoCombustivel { get; set; }
-        public TipoVagaEmbarcacao tipoVagaEmbarcacao { get; set; }
-        
 
-
-        public bool ValidaQuantidadeEmbarcacao(List<Embarcacao> embarcacoes)
-        {
-
-            if (embarcacoes.Count <= 2)
-            {
-                return true;
-            }
-
-            return false;
-        }
-    
+        public bool ValidaQuantidadeEmbarcacao(List<IEmbarcacao> embarcacoes);
     }
 
     public enum TipoVagaEmbarcacao

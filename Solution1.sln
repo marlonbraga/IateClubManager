@@ -9,9 +9,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Nautico", "Domain.Na
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contexto", "Contexto", "{24D0A874-9C0C-4685-A911-AAC77C211398}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Administrativo", "Domain.Administrativo\Domain.Administrativo.csproj", "{F1DA6D29-5B32-4608-BE6D-DD02767F6F4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Administrativo", "Domain.Administrativo\Domain.Administrativo.csproj", "{F1DA6D29-5B32-4608-BE6D-DD02767F6F4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IateClubeManage.Domain.Testes", "IateClubeManage.Domain.Testes\IateClubeManage.Domain.Testes.csproj", "{C8E41549-BB80-4B3B-83EA-08D55A7870A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IateClubeManage.Domain.Testes", "IateClubeManage.Domain.Testes\IateClubeManage.Domain.Testes.csproj", "{C8E41549-BB80-4B3B-83EA-08D55A7870A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Aplicação", "1 - Aplicação", "{5F1C0E12-2D40-4DC0-AE0E-B5C440893C29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domínio", "2 - Domínio", "{55B209D0-181F-4DF6-AE43-2CD5C6547CB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infraestrutura", "3 - Infraestrutura", "{5B7F5392-B33D-491E-A18D-34064FEF8C74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9 - Testes Automatizados", "9 - Testes Automatizados", "{B6354FD8-8AAE-4CBA-AA61-CFB2A30A31AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{4D95A2ED-9F1F-4318-B8ED-9EA7B574DE08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{AC2064BD-7519-42AB-B31B-B60CC53A199A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,9 +47,25 @@ Global
 		{C8E41549-BB80-4B3B-83EA-08D55A7870A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8E41549-BB80-4B3B-83EA-08D55A7870A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8E41549-BB80-4B3B-83EA-08D55A7870A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D95A2ED-9F1F-4318-B8ED-9EA7B574DE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D95A2ED-9F1F-4318-B8ED-9EA7B574DE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D95A2ED-9F1F-4318-B8ED-9EA7B574DE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D95A2ED-9F1F-4318-B8ED-9EA7B574DE08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC2064BD-7519-42AB-B31B-B60CC53A199A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC2064BD-7519-42AB-B31B-B60CC53A199A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC2064BD-7519-42AB-B31B-B60CC53A199A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC2064BD-7519-42AB-B31B-B60CC53A199A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BFA17F02-1517-4791-95C3-DC3E9667003B} = {55B209D0-181F-4DF6-AE43-2CD5C6547CB0}
+		{0E0651D0-232F-448B-B13E-1ACA3BB91B0E} = {55B209D0-181F-4DF6-AE43-2CD5C6547CB0}
+		{F1DA6D29-5B32-4608-BE6D-DD02767F6F4F} = {55B209D0-181F-4DF6-AE43-2CD5C6547CB0}
+		{C8E41549-BB80-4B3B-83EA-08D55A7870A0} = {B6354FD8-8AAE-4CBA-AA61-CFB2A30A31AB}
+		{4D95A2ED-9F1F-4318-B8ED-9EA7B574DE08} = {5F1C0E12-2D40-4DC0-AE0E-B5C440893C29}
+		{AC2064BD-7519-42AB-B31B-B60CC53A199A} = {5B7F5392-B33D-491E-A18D-34064FEF8C74}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E925EDEB-29B2-405F-8778-022904AA8216}

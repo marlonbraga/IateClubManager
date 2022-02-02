@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Core
+namespace Domain.Administrativo.Interfaces
 {
-    public class Usuario
-    {
-    }
+	public interface IResponsavel
+	{
+	}
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DQnJAiP7rUeBnBE4yIHJzDEeaGIaZe6vXrgsmIYnUEIKceUjp/aRLqlyHzwYRDgJvu/dQEhy0XGBYBeRDbWVfQ==",
+  "dgSpecHash": "3EiTom16pFQqDxU4+zzaTxLQTAnC8weJBu6N2kMmqs5EPSUE69UWqH9JPCilfmNZrL2m49ALX6aypVjctstmKw==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\InfNet\\IateClubeRepoMarlon\\IateClubManager\\Domain.Nautico\\Domain.Nautico.csproj",
+  "projectFilePath": "C:\\codigo\\IateClubManager\\Domain.Nautico\\Domain.Nautico.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
