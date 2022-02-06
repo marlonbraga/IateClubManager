@@ -10,8 +10,9 @@ O domínio se relaciona com a camada Application com requisições e respostas a
 Já sua relação com a Infrastructure diz respeito ao armazenamento dos dados e seus métodos, referente aos sócios e suas agregações, assim como os dados de navegação das embarcações.
 
 ### Diagrama de classe do modelo de domínio:
-[Clique aqui para acessar o link do diagrama:](https://github.com/marlonbraga/IateClubManager/blob/main/Diagramas-Diagrama_de_sequencia.jpg)
-![Diagrama de sequencia](Diagramas-Diagrama_de_sequencia.jpg)
+### Diagrama de classe do modelo de domínio:
+[Clique aqui para acessar o link do diagrama:](https://github.com/marlonbraga/IateClubManager/blob/main/Diagramas-Diagrama_de_Classes.jpg)
+![Diagrama de sequencia](Diagramas-Diagrama_de_Classes.jpg)
 
 ### Análize de Código
 ![Diagrama de sequencia](CodeAnalizer.png)
@@ -143,7 +144,8 @@ Entidade de Domínio:
 O projeto abaixo atende às rubricas nº 09, 10 e 11 da tarefa proposta.
 
 ### Entendimento do DDD através de um diagrama de sequência
-![Diagrama de sequencia](Diagramas-Diagrama de sequencia.jpg)
+[Clique aqui para acessar o link do diagrama:](https://github.com/marlonbraga/IateClubManager/blob/main/Diagramas-Diagrama_de_sequencia.jpg)
+![Diagrama de sequencia](Diagramas-Diagrama_de_sequencia.jpg)
 
 ### Linguagem Ubíqua 
 ##### Contexto Náutico:
