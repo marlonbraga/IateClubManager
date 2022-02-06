@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hka8iJdRwS9b4Lh6QZr6+cSZxvjOfs0XRYeBHLtnJTUoswGqUTvNn/00ljWKZQcbI3awaSA32Hhovkhjei4S2Q==",
+  "dgSpecHash": "kul9Y3bg1Oi6fqotxSMkbPCNJBjZTJMPtYiJXdzstG7N57mlgxlQ1M/uILEQkEXJ95lrWoMwiO1PY4Ofya3g0Q==",
   "success": true,
-  "projectFilePath": "C:\\codigo\\IateClubManager\\Domain.Core\\Domain.Core.csproj",
+  "projectFilePath": "C:\\Users\\marlon.braga\\IateClubManager\\Domain.Core\\Domain.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

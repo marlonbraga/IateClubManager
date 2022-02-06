@@ -1,10 +1,6 @@
 ﻿using Domain.Core;
 using Domain.Core.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Administrativo
 {
@@ -25,12 +21,12 @@ namespace Domain.Administrativo
         public bool ValidaHabilitacaoNautica(Tripulante tripulante)
         {
 
-            if (String.IsNullOrEmpty( tripulante.HabilitacaoNautica ))
+            if (string.IsNullOrEmpty(tripulante.HabilitacaoNautica))
             {
                 return false;
             }
 
-            if (String.IsNullOrWhiteSpace( tripulante.HabilitacaoNautica ))
+            if (string.IsNullOrWhiteSpace(tripulante.HabilitacaoNautica))
             {
                 return false;
             }

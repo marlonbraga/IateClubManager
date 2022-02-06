@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Domain.Core.Interfaces
 {
-	public interface IEmbarcacao
-	{
+    public interface IEmbarcacao
+    {
         public string Nome { get; set; }
         public string RegistroMarinha { get; set; }
         public string TamanhoEmbarcacao { get; set; }

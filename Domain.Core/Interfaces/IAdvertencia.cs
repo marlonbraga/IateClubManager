@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.Core.Interfaces
+﻿namespace Domain.Core.Interfaces
 {
-	public interface IAdvertencia
-	{
-		public bool Impeditiva { get; set; }
-		public bool Vigente { get; set; }
-	}
+    public interface IAdvertencia
+    {
+        public bool Impeditiva { get; set; }
+        public bool Vigente { get; set; }
+    }
 }

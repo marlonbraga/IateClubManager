@@ -1,14 +1,10 @@
 ﻿using Domain.Core;
 using Domain.Core.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Administrativo
 {
-    public class Titulo : Base, ITitulo
+    public class Titulo : ITitulo
     {
         public string NumeroTitulo { get; set; }
         public ISocio Socio { get; set; }

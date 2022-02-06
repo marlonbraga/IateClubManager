@@ -1,45 +1,59 @@
 ﻿using Domain.Core;
 using Domain.Core.Interfaces;
-using Domain.Nautico.Interfaces;
+using Domain.Core.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using IResponsavel = Domain.Core.Interfaces.IResponsavel;
-using Responsavel = Domain.Core.Responsavel;
 
 namespace Domain.Nautico
 {
-	public class FactoryPlanoNavegacao
-	{
-        public PlanoNavegacao CriacaoPlanoDeNavegacao(IResponsavel Responsavel, ITitulo Titulo, IEmbarcacao Embarcacao,
-            DateTime DataSaida, DateTime DataRetorno, string Destino, List<IPassageiro> Passageiros)
-		{
-			if (!ValidarEmbarcacao(Titulo, Embarcacao))
-			{
-                return null;
-            }
-            if (!ValidaHabilitacaoNautica(Responsavel))
-            {
-                return null;
-            }
-            if (!ValidaAdvertencia(Titulo))
-            {
-                return null;
-            }
-            if (!ValidaPendenciaFinanceira(Titulo))
-            {
-                return null;
-            }
-            return new PlanoNavegacao(DataSaida, DataRetorno, Destino, Responsavel, Passageiros, Embarcacao);
+    public class FactoryPlanoNavegacao : IFactoryPlanoNavegacao
+    {
+        public INauticoRepository __nauticoRepository__ { get; set; }
+
+        public FactoryPlanoNavegacao(INauticoRepository _nauticoRepository)
+        {
+            __nauticoRepository__ = _nauticoRepository;
         }
 
-        private bool ValidarEmbarcacao(ITitulo Titulo, IEmbarcacao Embarcacao)
+        public IPlanoNavegacao CriacaoPlanoDeNavegacao(IResponsavel _responsavel, ITitulo _titulo, IEmbarcacao _embarcacao,
+            DateTime _dataSaida, DateTime _dataRetorno, string _destino, List<IPassageiro> _passageiros)
         {
-            List<IEmbarcacao> EmbarcacoesValidas = Titulo.Embarcacoes;
+            if (ValidaCriacaoDePlanoDeNavegacao(_responsavel, _titulo, _embarcacao))
+            {
+                PlanoNavegacao planoNavegacao = new(_dataSaida, _dataRetorno, _destino, _responsavel, _passageiros, _embarcacao, _titulo);
+                __nauticoRepository__.CriacaoPlanoDeNavegacao(planoNavegacao);
+                return planoNavegacao;
+            }
+            return null;
+        }
 
-            IEmbarcacao retorno = EmbarcacoesValidas.Find(x => x == Embarcacao);
+        public bool ValidaCriacaoDePlanoDeNavegacao(IResponsavel _responsavel, ITitulo _titulo, IEmbarcacao _embarcacao)
+        {
+            if (!ValidarEmbarcacao(_titulo, _embarcacao))
+            {
+                return false;
+            }
+            if (!ValidaHabilitacaoNautica(_responsavel))
+            {
+                return false;
+            }
+            if (!ValidaAdvertencia(_titulo))
+            {
+                return false;
+            }
+            if (!ValidaPendenciaFinanceira(_titulo))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private bool ValidarEmbarcacao(ITitulo _titulo, IEmbarcacao _embarcacao)
+        {
+            List<IEmbarcacao> EmbarcacoesValidas = _titulo.Embarcacoes;
+
+            IEmbarcacao retorno = EmbarcacoesValidas.Find(x => x == _embarcacao);
             if (retorno == null)
             {
                 return false;
@@ -47,24 +61,26 @@ namespace Domain.Nautico
             return true;
         }
 
-        private bool ValidaHabilitacaoNautica(IResponsavel Responsavel)
+        private bool ValidaHabilitacaoNautica(IResponsavel _responsavel)
         {
-            return Responsavel.HabilitacaoNautica is not null;
+            return _responsavel.HabilitacaoNautica is not null;
         }
 
-        private bool ValidaAdvertencia(ITitulo Titulo)
+        private bool ValidaAdvertencia(ITitulo _titulo)
         {
-            foreach (IAdvertencia advertencia in Titulo.Advertencias)
+            foreach (IAdvertencia advertencia in _titulo.Advertencias)
             {
                 if (advertencia.Impeditiva && advertencia.Vigente)
+                {
                     return false;
+                }
             }
             return true;
         }
 
-        public bool ValidaPendenciaFinanceira(ITitulo Titulo)
+        public bool ValidaPendenciaFinanceira(ITitulo _titulo)
         {
-            foreach (ICobrancaFinanceira lista in Titulo.CobrancasFinanceiras)
+            foreach (ICobrancaFinanceira lista in _titulo.CobrancasFinanceiras)
             {
                 if (lista.Pago == false && lista.DataVencimento <= DateTime.Now.AddMonths(-3))
                 {

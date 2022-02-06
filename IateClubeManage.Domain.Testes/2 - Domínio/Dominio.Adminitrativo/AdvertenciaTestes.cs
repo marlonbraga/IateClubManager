@@ -1,16 +1,10 @@
-﻿using Domain.Administrativo;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace IateClubeManage.Domain.Testes.Dominio.Adminitrativo
 {
-	[TestClass]
-	public class AdvertenciaTestes
-	{
+    [TestClass]
+    public class AdvertenciaTestes
+    {
 
-	}
+    }
 }
